@@ -1,0 +1,739 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+/* ## Colors */
+:root{
+--Purple: hsl(254, 88%, 90%);
+--Purple-500: hsl(256, 67%, 59%);
+--Yellow-100: hsl(31, 66%, 93%);
+--Yellow-500: hsl(39, 100%, 71%);
+--White: hsl(0, 0%, 100%);
+--Black: hsl(0, 0%, 7%);
+--Font-size : 18px;
+
+}
+
+
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(243, 236, 236, 0.319);
+    font-family: "DM Sans", serif;
+    max-width: 1440px;
+
+
+}
+
+.attribution{
+    align-self: flex-end;
+
+}
+
+.wrapper{
+    display:flex ;
+  
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1.25rem;
+}
+
+.bento__container{
+    display: grid;
+    min-height: 200px;
+    max-width: 760px; /* Evita que el grid se expanda demasiado */
+    max-height: 900px; /* Limita la altura */
+    grid-template-columns: repeat(4, 1fr); /* Distribuye columnas */
+    grid-template-rows: 1fr; /*ajustó perfectamente a los hijos dentro de su padre*/
+    grid-template-areas: "create social social schedule"
+                        "create social social schedule"
+                        "create manage mantain schedule"
+                        "write manage mantain schedule"
+                        "write faster grow grow";
+    gap: 1.25rem;
+
+}
+
+.adds {
+    border-radius: 0.5rem;
+}
+
+.add1{
+    grid-area: social;
+    background-color: var(--Purple-500);
+    color: var(--White);
+    text-align: center;
+    padding: 2rem;
+    
+}
+
+.add2{
+    grid-area: manage;
+    background-color: var(--White);
+    padding: 1rem;
+
+}
+
+.add3{
+    grid-area: mantain;
+    background-color: var(--Yellow-500);
+    padding: 1rem;
+}
+.add4{
+    grid-area: schedule;
+    background-color: var(--Purple);
+    padding: 0.7rem;
+}
+.add5{
+    grid-area: grow;
+    background-color: var(--Purple-500);
+    color: var(--White);
+}
+
+.add6{
+    grid-area: faster;
+    background-color: var(--White);
+}
+
+.add7{
+    grid-area: create;
+    background-color: var(--Yellow-100);
+}
+
+.add8{
+    grid-area: write;
+    background-color: var(--Yellow-500);
+}
+
+img{
+    width: 30%;
+}
+
+/* typography */
+
+.head-tittle-socialm{
+    font-size: 2.4rem;
+    font-weight: 400;
+    text-align: center;
+    
+    line-height: 1;
+}
+
+
+
+.head-tittle-socialm span{
+    color: var(--Yellow-500);
+}
+
+.add1 img{
+    width: 45%;
+    margin-top: 0.9375rem;
+}
+
+.description-socialm{
+    font-size: 0.7rem;
+    margin-bottom: 0.75rem;
+    font-weight: 300;
+}
+
+
+.add2 img{
+    width: 200px;
+    
+}
+
+.head-tittle-posting-schedule,.head-tittle-maccounts, .head-tittle-schedule-social {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 0.9;
+
+}
+
+.add3 img{
+    width: 150px;
+}
+
+.head-tittle-schedule-social{
+    margin-bottom: 0.9375rem;
+}
+.add4 img{
+    width: 100%;
+  
+}
+
+.description-schedule-social{
+    font-size: 0.8rem;
+}
+
+.head-tittle-grow-followers{
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1;
+    
+}
+
+.add5{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.add5 img{
+    padding: 1rem;
+    width: 60%;
+
+    
+}
+
+.head-tittle-faster-growth{
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+.add6{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    
+}
+.add6 img{
+    align-self: flex-start;
+    width: 60%;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.head-tittle-create-schedule{
+    font-size: 1.7rem;
+    margin-top:2.5rem;
+    font-weight: 500;
+    line-height: 0.8;
+}
+
+.head-tittle-create-schedule span{
+    color: var(--Purple-500);
+}
+
+.add7{
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.add7 img{
+    width: 80%;
+    margin-top:1.25rem;
+}
+
+
+.head-tittle-write-content{
+    font-size: 1.7rem;
+    margin-top:2.5rem;
+    font-weight: 500;
+    line-height: 0.8;
+
+
+}
+
+.add8 img{
+    margin-top:1.25rem;
+    width: 80%;
+}
+.add8{
+    padding: 1rem;
+}
+
+
+.add2 {
+    position: relative;
+    padding: 1rem;
+    background-color: var(--White);
+    border-radius: 10px;
+    overflow: hidden;
+  
+}
+
+
+.add2 .image-container {
+    position: absolute; /* Fija el contenedor en relación con .add2 */
+    top: 5%; /* Ajusta la posición */
+    left:5%;
+    /* transform: translateX(-40%); */
+    width: 130%; /* Hace que la imagen sobresalga */
+    max-width: 300px;
+
+}
+
+.add2 .image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.add2 .head-tittle-maccounts{
+    position: absolute;
+    margin-top: 50px;
+}
+
+.add3{
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.add3 .head-tittle-posting-schedule{
+    margin-bottom: 3.75rem;
+}
+
+.add3 .image-container{
+   position: absolute;
+   top: 61%;
+
+}
+.add3 img{
+    width: 90%;
+}
+
+.add4{
+    position: relative;
+    overflow: hidden;
+    
+}
+.add4 .image-container{
+    position: absolute;
+    top: 21%;
+    width: 240px;
+    left: 13%;
+    
+
+}
+
+.add4 .image-container img{
+    width: 100%;
+    height: auto;
+}
+
+.add4 .head-tittle-schedule-social{
+    margin-top: 1.25rem;
+    padding-left: 0.625rem;
+    letter-spacing: -1px;
+    font-weight: 600;
+}
+
+.add4 .description-schedule-social{
+    margin-top: 235px;
+    padding: 0.625rem;
+    line-height: 1.1;
+}
+.add5 img{
+    width: 45%;
+    padding: 0;
+    margin: 0;
+    padding: 15px 5px 15px 15px;
+
+}
+.add5 h1{
+    padding-right:0.3125rem;
+    line-height: 0.9;
+    
+}
+.add6{
+    padding:0.9375rem;
+}
+.add6 img{
+    width: 70%;
+    margin-top:0.9375rem;
+}
+
+.description-faster-growth{
+    font-size: 12px;
+}
+.add7 img {
+    width: 100%;
+}
+
+.head-tittle-create-schedule{
+    letter-spacing: -1px;
+    margin-top: 1.5625rem;
+    font-size: 25px;
+}
+
+.add8 img{
+    width: 100%;
+}
+
+.head-tittle-write-content{
+    letter-spacing: -2px;
+    margin-top: 0px;
+    margin-bottom: 0.9375rem;
+}
+.attribution a{
+    text-decoration: none;
+    color: black;
+
+}
+
+/*mobile version*/
+
+@media screen and (max-width:640px) {
+    
+    .bento__container{
+        width: 100%;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "social"
+                             "manage"
+                             "mantain"
+                             "schedule"
+                             "grow"
+                             "faster"
+                             "create"
+                             "write";
+        
+
+    }
+
+
+    .add1{
+      
+        padding: 2rem;
+        
+    }
+
+    .body{
+        width: 100%;
+    }
+
+    
+    
+    .wrapper{
+        display:flex ;
+      
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding:1rem;
+    }
+    
+    .add2{
+        grid-area: manage;
+        background-color: var(--White);
+        padding: 1rem;
+    
+    }
+    
+    .add3{
+        grid-area: mantain;
+        background-color: var(--Yellow-500);
+        padding: 1rem;
+        overflow: visible;
+    }
+    .add4{
+        grid-area: schedule;
+        background-color: var(--Purple);
+        padding: 0.7rem;
+    }
+    .add5{
+        grid-area: grow;
+        background-color: var(--Purple-500);
+        color: var(--White);
+    }
+    
+    .add6{
+        grid-area: faster;
+        background-color: var(--White);
+    }
+    
+    .add7{
+        grid-area: create;
+        background-color: var(--Yellow-100);
+    }
+    
+    .add8{
+        grid-area: write;
+        background-color: var(--Yellow-500);
+       
+    }
+    
+    
+    /* typography */
+    
+    .head-tittle-socialm{
+        font-size: clamp(2rem, 1.2rem + 6.4vw, 2.7rem);
+        font-weight: 500;
+        padding: 0 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    
+    
+    .head-tittle-socialm span{
+        color: var(--Yellow-500);
+    }
+    
+    .add1 img{
+        width: 70%;
+    }
+    
+    .description-socialm{
+        font-size: clamp(0.8rem, -0.4rem + 6.4vw, 1.1rem);
+        margin-bottom: 0.7rem;
+     
+    }
+    
+    
+    .head-tittle-posting-schedule,.head-tittle-maccounts, .head-tittle-schedule-social {
+        font-size: clamp(1rem, -1rem + 10.6667vw, 1.5rem);
+        font-weight: 500;
+        line-height: 0.9;
+        letter-spacing: -1px;
+    
+    }
+    
+    
+    .head-tittle-schedule-social{
+        margin-bottom: 0.9375rem;
+    }
+    .add4 img{
+        width: 100%;
+      
+    }
+    
+    .description-schedule-social{
+        font-size: clamp(0.6rem, -0.2rem + 4.2667vw, 0.8rem);
+    }
+    
+    .head-tittle-grow-followers{
+        font-size: clamp(1.7rem, 0.9rem + 4.2667vw, 1.9rem);
+        font-weight: 500;
+        line-height: 1;
+        padding: 1rem 4rem;
+        margin-bottom: 5px;
+        
+    }
+    
+    .add5{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+       
+    }
+    
+    .add5 img{
+        padding: 1.2rem 1.5em 1.4rem 1.5rem;
+        width: 80%;
+        margin-top: 8px;
+    
+        
+    }
+    
+    .head-tittle-faster-growth{
+        font-size: clamp(2.7rem, 1.5rem + 6.4vw, 3rem);
+        font-weight: 500;
+    }
+    .add6{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        
+    }
+    .add6 img{
+        align-self: flex-start;
+        width: 60%;
+        margin: 0;
+        padding: 0;
+        
+    }
+    
+    .head-tittle-create-schedule{
+        font-size: clamp(1.5rem, 0.7rem + 4.2667vw, 1.7rem);
+        margin-top:2.5rem;
+        font-weight: 500;
+        line-height: 0.8;
+    }
+    
+    .head-tittle-create-schedule span{
+        color: var(--Purple-500);
+    }
+    
+    .add7{
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+    
+    .add7 img{
+        width: 80%;
+        margin-top:1.25rem;
+    }
+    
+    
+    .head-tittle-write-content{
+        font-size: clamp(1.5rem, 0.7rem + 4.2667vw, 1.7rem);
+        margin-top:2.5rem;
+        font-weight: 500;
+        line-height: 0.8;
+    
+    
+    }
+    
+    .add8 img{
+        margin-top:1.25rem;
+        width: 80%;
+    }
+    .add8{
+        padding: 1.5rem;
+    }
+    
+    
+    .add2 {
+        position: relative;
+        padding: 1rem;
+        background-color: var(--White);
+        border-radius: 10px;
+        overflow: visible;
+      
+    }
+    
+    
+    .add2 .image-container {
+        position: static; 
+        padding: 0;
+      
+    }
+    
+    .add2 .image-container img {
+        width: 105%;
+        height: auto;
+    
+    }
+    
+    .add2 .head-tittle-maccounts{
+        position: static;
+        margin-top: 15px;
+    }
+    
+    .add3{
+        position: relative;
+        overflow: hidden;
+        height: 215px;
+        
+    }
+    
+    .add3 .head-tittle-posting-schedule{
+        margin-bottom:9rem;
+        padding-right: 1rem;
+    }
+    
+    .add3 .image-container{
+       position: absolute;
+       top: 35%;
+     
+    
+    }
+    .add3 img{
+        width:65%;
+    }
+    
+
+
+/* veridico */
+@media screen and (max-width: 768px) {
+    .add4 {
+        position: relative; /* Asegura que el contenedor principal no tenga absolute */
+        overflow: visible; /* Elimina el overflow oculto si es necesario */
+    }
+
+    .add4 .image-container {
+        position: relative; /* para que el contenedor afecte el flujo */
+        top: auto; /* Quita el desplazamiento vertical */
+        left: 0; /* Asegura de que se alinee con el borde */
+        width: 100%; /* Asegura que ocupe todo el ancho disponible */
+        height: auto; /* Mantiene la proporción de la imagen */
+        margin: 0 auto; /* Centra la imagen */
+        padding-left: 0.3rem;
+        padding-right: 0.3rem;
+    }
+
+    .add4 .head-tittle-schedule-social {
+        margin-top: 1rem; 
+        padding-left: 1rem;
+        font-weight: 500;
+        font-size: 1.5rem; 
+        text-align: center;
+    }
+
+    .add4 .description-schedule-social {
+        margin-top: 1rem; 
+        padding: 0.625rem;
+        line-height: 1.4; 
+        font-size: 1rem; 
+        text-align: center;
+    }
+
+ 
+    .add5 h1{
+        padding-right:4rem;
+        line-height: 0.9;
+        
+    }
+    .add6{
+        padding:0.9375rem;
+    }
+    .add6 img{
+        width: 70%;
+        margin-top:0.9375rem;
+    }
+    
+    .description-faster-growth{
+        font-size: 1.1rem;
+    }
+    .add7 img {
+        width: 65%;
+    }
+    
+    .head-tittle-create-schedule{
+        margin-top: 1rem;
+        font-size: 2rem;
+    }
+    
+    .add8 img{
+        width: 70%;
+    }
+    
+    .head-tittle-write-content{
+        letter-spacing: -2px;
+        margin-top: 0px;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+
+    
+    .add2 .image-container {
+        width: 100%;
+
+      
+    }
+    
+ 
+    
+    
+
+    
+}
+
